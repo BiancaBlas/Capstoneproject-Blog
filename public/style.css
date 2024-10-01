@@ -1,0 +1,95 @@
+body {
+	margin: 0px;
+	background-color: #6962ad;
+
+	background-color: #036661;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 20px;
+}
+p,
+li {
+	font-family: "Reddit Sans", sans-serif;
+}
+
+main {
+	padding: 5rem;
+	max-width: 1000px;
+	margin: auto;
+	margin-top: 3rem;
+	background-color: white;
+	background-color: #96e9c6;
+	border: 5px solid white;
+}
+h1 {
+	color: #6c22a6;
+}
+h2 {
+	color: #6962ad;
+}
+h3 {
+	color: #83c0c1;
+}
+h4 {
+	display: flex;
+}
+
+nav {
+	background-color: #96e9c6;
+	padding: 0rem 5rem;
+	max-width: 1000px;
+	margin: auto;
+	border: 5px solid white;
+}
+nav ul {
+	list-style-type: none;
+	overflow: hidden;
+	padding: 0px;
+	display: flex;
+}
+nav li {
+	float: left;
+	padding: 1rem;
+	background-color: #83c0c1;
+	border: 2px solid white;
+	margin-top: 2px;
+}
+nav a {
+	text-decoration: none;
+}
+footer {
+	display: flex;
+	height: 100px;
+	align-content: center;
+	justify-content: center;
+	padding-top: 2rem;
+	margin: 1rem;
+}
+
+/* buttons */
+.button a {
+	text-decoration: none;
+	color: black;
+}
+.buttons {
+	display: flex;
+}
+.button {
+	margin-right: 5px;
+}
+
+.blog {
+	border: 2px solid #036661;
+	border-radius: 5px;
+	background-color: white;
+	padding: 2rem;
+	margin-bottom: 1rem;
+}
+
+.feedback-input {
+	width: 100%;
+	margin-bottom: 5px;
+	padding: 3px;
+}
+.feedback-input::placeholder {
+	font-family: "Reddit Sans", sans-serif;
+}

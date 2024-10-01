@@ -1,0 +1,45 @@
+<%- include ("partials/header.ejs") %>
+
+<!-- dit is hetzelfde als home uit tutorial-->
+
+<body>
+	<main>
+		<div class="container">
+			<% if (blogList.length < 1) { %>
+			<div class="blog">
+				<h1 class="no-blog-title">
+					You don't have any blogs yet. Please visit <br />the home page to create a new
+					blog.
+				</h1>
+			</div>
+			<% } else {%>
+			<h1>Your Blogs list</h1>
+
+			<% } %> <% for( let index=0; index < blogList.length; index++ ) { %>
+			<div class="blog">
+				<span class="blog-number"> <% index+ 1 %> </span>
+
+				<h4><%= blogList[index].title %></h4>
+				<p>
+					<%= blogList[index].text?.slice(0,300) %> <% if (blogList[index].text?.length>
+					299) { %> ...
+					<a href="/details/<%= blogList[index].id %>"> View Blog</a>
+					<% } %>
+				</p>
+				<p>Written by <%= blogList[index].name %></p>
+				<div class="buttons">
+					<form action="/delete/<%= blogList[index].id %>" method="post">
+						<button class="delete-btn button">Delete</button>
+					</form>
+					<form>
+						<button class="edit-btn button">
+							<a href="/edit/<%=  blogList[index].id %>">Edit</a>
+						</button>
+					</form>
+				</div>
+			</div>
+			<% } %>
+		</div>
+	</main>
+</body>
+<%- include ("partials/footer.ejs") %>

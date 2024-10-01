@@ -1,0 +1,19 @@
+<%- include ("partials/header.ejs") %>
+
+<main>
+	<div class="container">
+		<h1><%= blogDetails?.title %></h1>
+		<p><%= blogDetails?.text %></p>
+		<p>Written by: <%= blogDetails?.name %></p>
+		<div class="buttons">
+			<form action="/delete/<%= blogDetails?.id %>" method="post">
+				<button class="delete-btn button">Delete</button>
+			</form>
+			<form>
+				<button class="button"><a href="/edit/<%= blogDetails?.id %>">Edit</a></button>
+			</form>
+		</div>
+	</div>
+</main>
+
+<%- include ("partials/footer.ejs") %>

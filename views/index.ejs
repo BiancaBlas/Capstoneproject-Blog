@@ -1,0 +1,26 @@
+<%- include ("partials/header.ejs") %>
+
+
+    <main>
+        <div class="container">
+        <h1>This is the blog site of Bianca</h1>
+        <h2>You can create your own blog here!</h2>
+
+
+        <p>Enter your blogpost below</p>
+
+
+        <form class="homeForm" action="<%= locals.isEdit ? `/edit/${locals.blogDetails?.id}` : '/blogList' %>" method="POST">
+            <input  name="name" type="text" class="name feedback-input" placeholder="Name" /></br>
+            <input name="title" type="text" class="feedback-input title" placeholder="Title" /></br>
+            <textarea  name="text" class="feedback-input text" rows="6" placeholder="Your blog text"></textarea></br>
+            <input class="submit button" type="submit" value="Submit" />
+        </form>
+        </div>
+    </main>
+
+
+
+
+
+    <%- include ("partials/footer.ejs") %>
